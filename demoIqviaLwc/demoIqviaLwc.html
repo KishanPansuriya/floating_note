@@ -1,0 +1,56 @@
+<template>
+    <div class='right_panel'>
+        <!--<lightning-icon icon-name='action:close' size='x-small' class='arrow'></lightning-icon>-->
+        <template if:false={isComponentCollapsed}>
+            <div class="arrow" onclick={handleCollapse}>
+                <svg class="arrow" height="18" width="18">
+                    <circle class="circle" cx="9" cy="9" r="8" />
+                    <line class="line" x1="8" y1="5" x2="11" y2="9" />
+                    <line class="line" x1="8" y1="13" x2="11" y2="9" />
+                </svg>
+            </div>
+        </template>
+        <template if:true={isComponentCollapsed}>
+            <div class="arrow" onclick={handleExpand}>
+                <svg class="arrow" height="18" width="18" style="transform: scale(-1,1)">
+                    <circle class="circle" cx="9" cy="9" r="8" />
+                    <line class="line" x1="8" y1="5" x2="11" y2="9" />
+                    <line class="line" x1="8" y1="13" x2="11" y2="9" />
+                </svg>
+            </div>
+        </template>
+        <div class='section1'>
+            <div class='content'>
+                <div>
+                    <p><b>Floating Notes</b></p>
+                    <br />
+                    <p>Impact</p>
+                    <br />
+                    <p>Would an occurence of the risk have a significant impact on scope, budget, and quality?</p>
+                    <br /><br />
+                    <p style='color: red;'>Very High &nbsp; &nbsp; &nbsp; 0.8</p>
+                    <br />
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type.But also the leap into electronic
+                        typesetting, remaining essentially unchanged.</p>
+                    <br />
+                    <br />
+                    <p style='color: orange;'>Medium &nbsp; &nbsp; &nbsp; 0.6</p>
+                    <br />
+                    <p>But also the leap into electronic typesetting, remaining essentially unchanged.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        when an unknown printer took a galley of type.</p>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!--
+    <div style='position: fixed; right: 0; 
+    background-color: #dddddd; padding: 20px; 
+    width:200px; border-radius: 4px;'>    
+-->
